@@ -45,5 +45,6 @@ jobs:
         script: |
           cd apps/calculatejs
           git pull origin master
-          npm install
+          ~/.nvm/version/node/v12.19.0/bin/npm install
+          ~/.nvm/versions/node/v12.19.0/bin/pm2 restart all
           pm2 restart all
