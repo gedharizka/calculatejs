@@ -42,4 +42,8 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: whoami
+        script: |
+          cd apps/calculatejs
+          git pull origin master
+          npm install
+          pm2 restart all
